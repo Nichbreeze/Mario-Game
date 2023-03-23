@@ -5,8 +5,7 @@
     }
     
     .game-board{
-    width:100%;
-
+    width: 100%px;
     height: 500px;
     border-bottom: 15px solid rgb(35,160,35);
     margin: 0 auto;
@@ -15,38 +14,45 @@
     background: linear-gradient(#87ceeb, #E0f6ff);
     }
 
-    .bug{
+    .pipe{
         position: absolute;
-        bottom:0;
-        width:80px;
-        animation: bug-animation 2s infinite linear;
+        bottom: -30px;
+        width: 190px;
+        animation: pipe-animation 2s infinite linear;
     }
     .clouds{
         position: absolute;
         width: 500px;
         animation: clouds-animation 20s infinite linear;
-    }
+    }/*
+    .aviao{
+        position: absolute;
+        bottom: 20px;
+        width: 700px;
+        animation: aviao-animation 5s infinite linear;
+    } */
+
     .mario{
         position: absolute;
         bottom: 0px;
-        width: 100px;
+        width: 120px;
     }
 
     .jump{
-        animation: jump 500ms ease-out;
+        animation: mario-jump 500ms ease-out;
 
     }
-        @keyframes bug-animation {
+        @keyframes pipe-animation {
     
         from{
-            right: 0;
+            right: -20%;
         }
         to {
             right: 100%;
         }
         
     }
-    @keyframes jump {
+    @keyframes mario-jump {
         0%{
             bottom: 0;
         }
@@ -72,5 +78,4 @@
         to {
             right: 100%;
         }
-        
     }
